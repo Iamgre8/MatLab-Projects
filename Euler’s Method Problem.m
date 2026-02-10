@@ -13,7 +13,6 @@ function [t,y] = eulerMethod(f, dt, Tf, tI, yI)
     y(1) = yI;
     numSteps = (Tf - tI)/dt;
     for ind=1:numSteps
-    % Fill in the lines below this
         m = f(t(ind), y(ind));
         t(ind+1) = t(ind) + dt;
         y(ind+1) = y(ind) + dt * m; 
